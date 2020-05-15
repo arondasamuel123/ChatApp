@@ -1,0 +1,8 @@
+.bg-primary {
+  background-image: url("../../assets/images/convo2.jpg") !important;
+  background-size: cover;
+  height: 750px;
+}
+.masthead-heading {
+  margin-top: 250px;
+}
