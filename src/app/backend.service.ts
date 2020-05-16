@@ -21,4 +21,7 @@ export class BackendService {
   deleteMessages(id: number) {
     return this.http.delete<any>(environment.baseUrl + 'comment/' + id);
   }
+  updateMessages(name: string, text: string, id: number) {
+    return this.http.put<any>(environment.baseUrl + 'comment/' + id, {name, text});
+  }
 }

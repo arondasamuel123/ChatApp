@@ -9,6 +9,7 @@ import { MessagesListComponent } from './messages-list/messages-list.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { DeleteMessageComponent } from './delete-message/delete-message.component';
+import { UpdateFormComponent } from './update-form/update-form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DeleteMessageComponent } from './delete-message/delete-message.componen
     HeaderComponent,
     ChatroomComponent,
     MessagesListComponent,
-    DeleteMessageComponent
+    DeleteMessageComponent,
+    UpdateFormComponent
   ],
   imports: [
     BrowserModule,
