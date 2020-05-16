@@ -13,4 +13,9 @@ export class BackendService {
   getMessages() {
     return this.http.get(environment.baseUrl + 'comments');
   }
+  sendMessages(name: string, text: string) {
+    // tslint:disable-next-line: max-line-length
+    return this.http.post<any>(environment.baseUrl + 'comments', {name, text});
+
+  }
 }

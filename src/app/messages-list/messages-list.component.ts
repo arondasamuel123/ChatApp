@@ -8,6 +8,7 @@ import {BackendService} from '../backend.service';
 })
 export class MessagesListComponent implements OnInit {
 data: any;
+
   constructor(private endpoint: BackendService) { }
 
   ngOnInit() {

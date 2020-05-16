@@ -4,7 +4,7 @@
         <div class="card">
           <div class="card-header">Messages</div>
           <div class="card-body height3">
-            <ul class="chat-list" *ngFor="let message of data">
+            <ul class="chat-list" *ngFor="let message of data; let i = index">
               <li class="in">
                 <div class="chat-img">
                   <img alt="Avatar" src="https://bootdey.com/img/Content/avatar/avatar1.png">
@@ -17,17 +17,18 @@
                   </div>
                 </div>
               </li>
-              <!-- <li class="out">
+              <li class="out">
                 <div class="chat-img">
                   <img alt="Avtar" src="https://bootdey.com/img/Content/avatar/avatar6.png">
                 </div>
                 <div class="chat-body">
                   <div class="chat-message">
-                    <h5>Serena</h5>
-                    <p>Next level veard</p>
+                    <h5>{{message.name}}</h5>
+                    <p>{{message.text}}</p>
+                      <p>{{message.dateAdded | date}}</p>
                   </div>
                 </div>
-              </li> -->
+              </li>
             </ul>
           </div>
         </div>
