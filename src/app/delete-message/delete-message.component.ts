@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {BackendService} from '../backend.service';
 import {ActivatedRoute, Router} from '@angular/router';
-
-
+import swal from 'sweetalert';
 @Component({
   selector: 'app-delete-message',
   templateUrl: './delete-message.component.html',
@@ -17,8 +16,13 @@ export class DeleteMessageComponent implements OnInit {
       const id = params.id;
       this.endpoint.deleteMessages(id).subscribe(
         response => {
-          alert('Are you sure you want to delete this message?');
+
           this.router.navigate(['']);
+          swal({
+            title: 'Message deleted',
+            text: 'Messages successfully deleted',
+            icon: 'success',
+          });
           console.log(response);
         },
         error => {

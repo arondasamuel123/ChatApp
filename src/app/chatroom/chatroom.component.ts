@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Messages} from '../messages';
 import {BackendService} from '../backend.service';
+import swal from 'sweetalert';
 
 
 @Component({
@@ -16,11 +17,19 @@ newMessages = new Messages('', '');
     this.endpoint.sendMessages(this.newMessages.name, this.newMessages.text).subscribe(
       response => {
         console.log(response);
-        alert('Message sent successfully');
+        swal({
+          title: 'Message sent',
+          text: 'Message send successfully',
+          icon: 'success',
+        });
       },
       error => {
         console.log(error);
-        alert('Opps. Something went wrong');
+        swal({
+          title: 'Error',
+          text: 'Oops! Something went wrong',
+          icon: 'warning',
+        });
       }
     );
   }
