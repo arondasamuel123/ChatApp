@@ -14,21 +14,19 @@
                     <h5>{{message.name}}</h5>
                     <p>{{message.text}}</p>
                       <p>{{message.dateAdded | date}}</p>
+
                   </div>
                 </div>
               </li>
-              <li class="out">
-                <div class="chat-img">
-                  <img alt="Avtar" src="https://bootdey.com/img/Content/avatar/avatar6.png">
-                </div>
-                <div class="chat-body">
-                  <div class="chat-message">
-                    <h5>{{message.name}}</h5>
-                    <p>{{message.text}}</p>
-                      <p>{{message.dateAdded | date}}</p>
-                  </div>
-                </div>
-              </li>
+              <div class="row">
+              <div class="mb-4 mx-4">
+              <a href="delete/{{message.id}}"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+
+              </div>
+              <div class="mb-5 mx-4">
+                <a href="edit/{{message.id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+              </div>
+              </div>
             </ul>
           </div>
         </div>

@@ -18,4 +18,7 @@ export class BackendService {
     return this.http.post<any>(environment.baseUrl + 'comments', {name, text});
 
   }
+  deleteMessages(id: number) {
+    return this.http.delete<any>(environment.baseUrl + 'comment/' + id);
+  }
 }

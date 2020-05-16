@@ -102,3 +102,9 @@
 .content{
   margin-top:40px;
 }
+.fa-trash {
+  color: red;
+}
+.fa-pencil {
+  color: blue;
+}

@@ -8,13 +8,15 @@ import { ChatroomComponent } from './chatroom/chatroom.component';
 import { MessagesListComponent } from './messages-list/messages-list.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { DeleteMessageComponent } from './delete-message/delete-message.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ChatroomComponent,
-    MessagesListComponent
+    MessagesListComponent,
+    DeleteMessageComponent
   ],
   imports: [
     BrowserModule,
